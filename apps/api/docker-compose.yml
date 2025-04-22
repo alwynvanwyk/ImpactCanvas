@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - HOST=0.0.0.0
+      - DEBUG=False
+      - CORS_ORIGINS=http://localhost:3000,http://127.0.0.1:3000
+      - USE_MOCK=True
+    volumes:
+      - .:/app
+    restart: unless-stopped 

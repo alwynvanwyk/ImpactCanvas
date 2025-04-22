@@ -1,0 +1,87 @@
+# Impact Canvas Coding Standards and Guidelines
+
+## Frontend Development
+
+### Next.js Best Practices
+- Use the App Router for new components and pages
+- Implement server components where possible to improve performance
+- Follow the principles of progressive enhancement
+- Use TypeScript for type safety
+
+### SurveyJS Integration
+- Use the survey-react component from SurveyJS
+- Implement custom styling to match the application's design system
+- Handle form validation both client-side and server-side
+- Store survey definitions in separate JSON files for maintainability
+
+### Component Structure
+- Follow atomic design principles (atoms, molecules, organisms, templates, pages)
+- Create reusable UI components in a dedicated components directory
+- Implement proper prop validation
+- Use React hooks for state management and side effects
+
+### Styling
+- Use CSS Modules or styled-components for component styling
+- Follow a consistent color scheme and typography
+- Ensure responsive design for all screen sizes
+- Implement accessibility best practices (WCAG 2.1 AA compliance)
+
+## Backend Development
+
+### FastAPI Implementation
+- Organize routes logically by domain/feature
+- Implement proper request validation using Pydantic models
+- Use dependency injection for services and repositories
+- Follow RESTful API design principles
+
+### AI Integration
+- Keep AI prompts in a separate configuration file for easy updates
+- Implement proper error handling for API calls to OpenAI
+- Cache responses where appropriate to reduce API costs
+- Implement rate limiting and retry logic
+
+### Database Access
+- Use SQLAlchemy for database operations
+- Implement repository pattern for data access
+- Use migrations for database schema changes
+- Follow proper security practices for database access
+
+## General Coding Standards
+
+### Code Quality
+- Write clean, readable, and well-documented code
+- Follow consistent naming conventions
+- Implement comprehensive error handling
+- Write unit tests for critical functionality
+
+### Security Considerations
+- Never hardcode sensitive information (API keys, credentials)
+- Use environment variables for configuration
+- Implement proper input validation
+- Follow OWASP security guidelines
+
+### Performance
+- Optimize database queries
+- Implement proper caching strategies
+- Minimize bundle size for frontend assets
+- Use lazy loading for components and routes
+
+## Development Workflow
+
+### Version Control
+- Use feature branches for new development
+- Write clear and descriptive commit messages
+- Perform code reviews before merging
+- Follow semantic versioning for releases
+
+### Testing
+- Write unit tests for business logic
+- Implement integration tests for API endpoints
+- Use end-to-end tests for critical user flows
+- Aim for good test coverage of core functionality
+
+### Documentation
+- Document API endpoints using OpenAPI/Swagger
+- Maintain up-to-date README files
+- Document complex algorithms and business logic
+- Use JSDoc/TypeDoc for code documentation

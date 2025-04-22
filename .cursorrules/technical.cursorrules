@@ -1,0 +1,119 @@
+# Impact Canvas Technical Specification
+
+## System Architecture
+
+ImpactCanvas follows a simple, modern, client-server architecture.
+
+### Frontend
+- **Framework**: Next.js
+- **Form Component**: SurveyJS (survey-react)
+- **HTTP Client**: Axios for API calls
+- **Output Display**: Editable text areas and structured tables for user refinement
+- **Deployment**: Vercel, Netlify, or any similar static host provider
+
+### Backend
+- **Framework**: Python FastAPI (recommended)
+- **Language Model Integration**: OpenAI GPT4 API
+- **Data Format**: JSON (structured based on SurveyJS schema)
+- **Error Handling**: HTTP error codes and descriptive error responses
+- **Deployment**: Docker containers, cloud serverless (e.g., AWS Lambda), or Supabase Edge Functions
+
+### Database and Storage
+- **Recommended**: PostgreSQL via Supabase (fast integration)
+- **Alternatives**: Firebase, MongoDB Atlas, JSON file storage (for prototyping)
+
+## Workflow
+
+1. Customer opens Web App
+2. Fills out SurveyJS Form (Simplified Theory of Change)
+3. Reviews & Submits Form
+4. Backend receives JSON Data submission
+5. AI generates outputs:
+   - Theory of Change
+   - Impact Activities
+   - Monitoring Plan
+6. Outputs returned to customer
+7. Customer reviews generated outputs
+8. If satisfied, exports & downloads report; if not, edits outputs directly in Web App
+9. Process Complete
+
+## Frontend Implementation
+
+### SurveyJS Form
+Captures structured project information:
+- Purpose, Vision, Mission, Approach
+- Key Activities (up to 3)
+- Resources (human, physical, financial, partnerships)
+- Audience (beneficiaries, customers)
+- Indicators for Monitoring
+
+### Frontend Responsibilities
+- Displaying SurveyJS form clearly and responsively
+- Validating inputs (required fields)
+- Submitting JSON data via Axios to the backend API
+- Displaying and enabling edits on the AI-generated outputs
+
+## Backend Implementation
+
+### FastAPI Endpoint Specification
+- **URL**: /generate-theory-of-change/
+- **Method**: POST
+- **Request Content-Type**: application/json
+
+### Request Body Example (from SurveyJS)
+```json
+{
+  "purpose": "To address food insecurity",
+  "vision": "A resilient community garden",
+  "mission": "...",
+  "approach": "...",
+  "activity1": "...",
+  "activity2": "...",
+  "activity3": "...",
+  "humanResources": "...",
+  "physicalResources": "...",
+  "financialResources": "...",
+  "partnerships": "...",
+  "beneficiaries": "...",
+  "customers": "...",
+  "indicator1": "...",
+  "indicator2": "...",
+  "indicator3": "..."
+}
+```
+
+### Response
+```json
+{
+  "generated_output": "Theory of Change:...\n\nImpact Activities:\n-...\n-...\n\nMonitoring Plan:\n| Indicator | Method | Frequency |\n|----------|--------|----------|"
+}
+```
+
+### AI Integration
+- **Prompt**: Carefully crafted prompts to GPT4 using the structured JSON from SurveyJS
+- **AI Model**: GPT4 (gpt-4-turbo recommended)
+- **API Response Handling**: Includes basic error management, retries, and timeout logic
+
+## Security and Privacy
+- **Authentication/Authorization**: Optional MVP (Consider integrating simple OAuth Google/GitHub) if multi-user access needed
+- **Data Encryption**: HTTPS enforced for all data transfers
+- **API Keys and Sensitive Data**: Environment variables (.env), not hardcoded
+
+## Deployment and Infrastructure
+Recommended Deployment Stack (simplified):
+- **Frontend**: Netlify, Vercel, GitHub Pages
+- **Backend/API**: Docker container or serverless functions (AWS Lambda, Vercel Serverless, Supabase Edge Functions)
+- **Database**: Supabase PostgreSQL, Firebase, or MongoDB Atlas
+- **Monitoring/Observability**: Sentry, Grafana, Prometheus (for production readiness)
+
+## Technology Stack Summary
+| Component | Technology/Framework |
+|-----------|---------------------|
+| Frontend | Next.js, SurveyJS, Axios |
+| Backend | Python FastAPI |
+| AI Generation | GPT4 via OpenAI API |
+| Database | Supabase PostgreSQL |
+| Storage | Cloud Storage or Supabase |
+| Deployment | Vercel, Netlify, AWS Lambda |
+| Security | HTTPS, OAuth (Optional) |
+| Observability & Monitoring | Sentry, Grafana, Prometheus |

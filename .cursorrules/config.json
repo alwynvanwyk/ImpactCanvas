@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0",
+  "project": "Impact Canvas",
+  "description": "An AI-powered solution for social impact organizations to create Theory of Change, impact activities, and monitoring plans",
+  "rules": [
+    {
+      "name": "main",
+      "path": "main.cursorrules",
+      "description": "Main entry point for Impact Canvas Cursor rules"
+    },
+    {
+      "name": "project",
+      "path": "project.cursorrules",
+      "description": "Project overview and product description"
+    },
+    {
+      "name": "technical",
+      "path": "technical.cursorrules",
+      "description": "Technical specifications and architecture"
+    },
+    {
+      "name": "coding",
+      "path": "coding.cursorrules",
+      "description": "Coding standards and best practices"
+    }
+  ],
+  "references": [
+    {
+      "name": "Product Description",
+      "path": "../impact-canvas/spec/Product_Description-Impact Canvas.pdf",
+      "description": "Detailed product description document"
+    },
+    {
+      "name": "Technical Specification",
+      "path": "../impact-canvas/spec/Technical_Specification-Impact-Canvas.pdf",
+      "description": "Detailed technical specification document"
+    }
+  ],
+  "settings": {
+    "always_reference_product_info": true,
+    "follow_coding_standards": true,
+    "priority_rules": ["main", "project", "technical", "coding"]
+  }
+}

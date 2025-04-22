@@ -1,0 +1,26 @@
+# Impact Canvas Project Overview
+
+## Product Description
+
+ImpactCanvas is an intuitive, AI-powered solution designed specifically for social impact organisations and environmental non-profits. By simplifying the process of creating your project's Theory of Change (ToC), identifying impactful activities, and establishing effective monitoring plans, ImpactCanvas saves you valuable time and resources.
+
+## How It Works
+
+- Easily input your project details using our simplified, user-friendly digital canvas form.
+- Instantly receive a professionally crafted Theory of Change, a clear list of recommended impact activities, and a detailed plan for monitoring and evaluation.
+- Edit and refine your generated outputs right in the platform, ensuring complete alignment with your project's vision and goals.
+
+## Key Features
+
+- **Automated Theory of Change Generation**: Clearly articulate your project's purpose, vision, and intended outcomes.
+- **AI-suggested Impact Activities**: Receive actionable, tailored activities directly aligned with your objectives.
+- **Custom Monitoring Plans**: Easily track your project's success with practical indicators, clear methods, and recommended monitoring frequencies.
+- **Seamless Integration**: Built using modern web technologies, including SurveyJS, React, and FastAPI, ensuring reliable performance and effortless integration into your workflow.
+
+## Target Audience
+
+ImpactCanvas is perfect for project managers, social entrepreneurs, and community leaders who want to efficiently transform their visions into actionable, measurable impact strategies.
+
+## Project Tagline
+
+Simplify your impact planning. Make meaningful change. Start automating with ImpactCanvas today.

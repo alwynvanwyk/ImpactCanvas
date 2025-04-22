@@ -1,0 +1,43 @@
+# Impact Canvas - Main Cursor Rules
+
+## Introduction
+
+This file serves as the main entry point for Cursor rules related to the Impact Canvas project. It provides guidance on how to use the information in the other rule files and ensures that the AI references the Impact Canvas product information when generating responses.
+
+## Available Documentation
+
+The following documentation is available for the Impact Canvas project:
+
+1. **Project Overview** (project.cursorrules): Contains general information about the Impact Canvas product, including its purpose, features, and target audience.
+
+2. **Technical Specification** (technical.cursorrules): Contains detailed technical information about the system architecture, workflow, and implementation details.
+
+3. **Coding Standards** (coding.cursorrules): Contains guidelines for coding standards and best practices specific to the Impact Canvas project.
+
+## Guidelines for AI Responses
+
+When generating responses related to the Impact Canvas project, please follow these guidelines:
+
+1. **Reference Product Information**: Always reference the appropriate product information from the project.cursorrules file when explaining what Impact Canvas is or its purpose.
+
+2. **Follow Technical Specifications**: When generating code or providing technical advice, ensure it aligns with the technical specifications outlined in technical.cursorrules.
+
+3. **Adhere to Coding Standards**: All code suggestions should follow the coding standards and best practices outlined in coding.cursorrules.
+
+4. **Maintain Consistency**: Ensure consistency in terminology, architecture, and approach across all responses.
+
+5. **Provide Context**: When appropriate, provide context about how your suggestions fit into the overall Impact Canvas product vision and architecture.
+
+## Example Usage
+
+When asked about Impact Canvas, your response should include relevant information from the product description:
+
+"Impact Canvas is an AI-powered solution designed for social impact organizations and environmental non-profits. It simplifies the process of creating a Theory of Change, identifying impact activities, and establishing monitoring plans."
+
+When providing technical advice, reference the technical specifications:
+
+"For the frontend implementation of Impact Canvas, we should use Next.js as the framework and SurveyJS for the form component, as specified in the technical documentation."
+
+When suggesting code, follow the coding standards:
+
+"Let's implement this feature using React hooks for state management and ensure we follow the atomic design principles for component structure, as outlined in our coding standards."
